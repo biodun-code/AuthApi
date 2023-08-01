@@ -19,9 +19,13 @@ JWT Token Configuration
 To enable JWT token generation and authentication, you need to replace the placeholders with the actual values for JWT token configuration in the Program.cs file:
 
 // Replace the following placeholders with actual values for JWT token configuration
+
 const string issuer = "your-issuer";
+
 const string audience = "your-audience";
+
 const string secretKey = "your-secret-key";
+
 Replace your-issuer, your-audience, and your-secret-key with your desired values.
 
 Build and Run the API
