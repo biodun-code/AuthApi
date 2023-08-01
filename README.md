@@ -15,7 +15,10 @@ Navigate to the AuthApi directory.
 Run the following command to create the database and apply migrations:
 
 dotnet ef database update --project AuthApi --startup-project AuthApi --msbuildprojectextensionspath .
+
+
 JWT Token Configuration
+
 To enable JWT token generation and authentication, you need to replace the placeholders with the actual values for JWT token configuration in the Program.cs file:
 
 // Replace the following placeholders with actual values for JWT token configuration
@@ -29,8 +32,11 @@ const string secretKey = "your-secret-key";
 Replace your-issuer, your-audience, and your-secret-key with your desired values.
 
 Build and Run the API
+
 Open a terminal or command prompt.
+
 Navigate to the AuthApi directory.
+
 Run the following command to build the API:
 
 dotnet build
