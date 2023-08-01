@@ -13,14 +13,11 @@ Before running the API, ensure you have set up the database:
 Open a terminal or command prompt.
 Navigate to the AuthApi directory.
 Run the following command to create the database and apply migrations:
-bash
-Copy code
+
 dotnet ef database update --project AuthApi --startup-project AuthApi --msbuildprojectextensionspath .
 JWT Token Configuration
 To enable JWT token generation and authentication, you need to replace the placeholders with the actual values for JWT token configuration in the Program.cs file:
 
-csharp
-Copy code
 // Replace the following placeholders with actual values for JWT token configuration
 const string issuer = "your-issuer";
 const string audience = "your-audience";
@@ -31,23 +28,27 @@ Build and Run the API
 Open a terminal or command prompt.
 Navigate to the AuthApi directory.
 Run the following command to build the API:
-bash
-Copy code
+
 dotnet build
+
 Run the following command to start the API:
-bash
-Copy code
+
 dotnet run --project AuthApi --urls=https://localhost:5001
+
+
 Testing the API
 You can now test the API using a tool like Postman or any other HTTP client:
 
 Use your HTTP client to send a POST request to https://localhost:5001/api/auth/login with the following JSON body:
 json
-Copy code
+
+
 {
   "username": "FrontOffice",
   "password": "your-password"
 }
+
+
 Replace your-password with the password for the "FrontOffice" user.
 
 The API will respond with a JWT token. Copy the token.
